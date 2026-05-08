@@ -162,46 +162,47 @@
             </div>
         </section>
 
-        <section class="mb-20">
-            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight">Technical Challenge & Debugging Roadmap</h3>
-            <div class="space-y-4">
-                <div class="border-l-4 border-orange-500 bg-slate-900/40 p-6 rounded-r-lg">
-                    <div class="flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
-                        <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Servo Current Inrush</h4>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">The 25kg servo motor draws significant current during peak torque, causing logic rail instability.</p>
-                    <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: USE A 1000UF / 16V CAPACITOR FOR DECOUPLING TO BUFFER THE POWER RAIL.</p>
-                </div>
-
-                <div class="border-l-4 border-orange-500 bg-slate-900/40 p-6 rounded-r-lg">
-                    <div class="flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
-                        <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Buck Converter Polar Sensitivity</h4>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">The XL4016 input is polarized; accidental reverse polarity will cause catastrophic component failure.</p>
-                    <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: INTEGRATE A PROTECTION DIODE AT THE INPUT STAGE TO PREVENT BLOW-UPS.</p>
-                </div>
-
-                <div class="border-l-4 border-orange-500 bg-slate-900/40 p-6 rounded-r-lg">
-                    <div class="flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
-                        <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Over-Current Safety (15A+)</h4>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">System current may exceed 15A during multi-axis movement, risking heat damage or fire.</p>
-                    <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: ADD AN INLINE FUSE TO THE PRIMARY POWER RAIL TO PROTECT THE ENTIRE SYSTEM.</p>
-                </div>
-
-                <div class="border-l-4 border-orange-500 bg-slate-900/40 p-6 rounded-r-lg">
-                    <div class="flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
-                        <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Prototype Connection Instability</h4>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">The current system is built on a breadboard with jumper wires, which lacks the mechanical stability needed for frequent travel and storage. Wires often fall out due to loose connections; with over 30 critical pins for the NEMA drivers and sensors, a single loose wire results in significant downtime spent re-diagnosing the system against the technical wiring diagram.</p>
-                    <p class="mono text-[11px] text-orange-400 font-bold italic">Proposed idea: Design a custom PCB with pin headers to replace loose wiring with trustable, secure connections.</p>
-                </div>
+       <section class="mb-20">
+    <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight">Technical Challenge & Debugging Roadmap</h3>
+    
+    <div class="space-y-6">
+        <div class="card-bg border-2 border-orange-500/50 p-6 rounded-lg transition-all hover:border-orange-500">
+            <div class="flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
+                <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Servo Current Inrush</h4>
             </div>
-        </section>
+            <p class="text-slate-400 text-sm mb-4">The 25kg servo motor draws significant current during peak torque, causing logic rail instability.</p>
+            <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: USE A 1000UF / 16V CAPACITOR FOR DECOUPLING TO BUFFER THE POWER RAIL.</p>
+        </div>
+
+        <div class="card-bg border-2 border-orange-500/50 p-6 rounded-lg transition-all hover:border-orange-500">
+            <div class="flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
+                <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Buck Converter Polar Sensitivity</h4>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">The XL4016 input is polarized; accidental reverse polarity will cause catastrophic component failure.</p>
+            <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: INTEGRATE A PROTECTION DIODE AT THE INPUT STAGE TO PREVENT BLOW-UPS.</p>
+        </div>
+
+        <div class="card-bg border-2 border-orange-500/50 p-6 rounded-lg transition-all hover:border-orange-500">
+            <div class="flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
+                <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Over-Current Safety (15A+)</h4>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">System current may exceed 15A during multi-axis movement, risking heat damage or fire.</p>
+            <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: ADD AN INLINE FUSE TO THE PRIMARY POWER RAIL TO PROTECT THE ENTIRE SYSTEM.</p>
+        </div>
+
+        <div class="card-bg border-2 border-orange-500/50 p-6 rounded-lg transition-all hover:border-orange-500">
+            <div class="flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
+                <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Prototype Connection Instability</h4>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">The current system is built on a breadboard with jumper wires, which lacks mechanical stability. Wires often fall out due to loose connections; with over 30 critical pins, a single loose wire results in significant downtime.</p>
+            <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: DESIGN A CUSTOM PCB WITH PIN HEADERS TO REPLACE LOOSE WIRING WITH SECURE CONNECTIONS.</p>
+        </div>
+    </div>
+</section>
 
         <section class="mt-20 py-12 border-t border-white/10">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 card-bg p-8 rounded-sm">
@@ -211,7 +212,7 @@
                 </div>
                 <div class="bg-white px-6 py-3 rounded flex items-center gap-2 text-slate-900 font-bold uppercase text-sm tracking-widest">
                     <i class="fa-brands fa-github text-xl"></i>
-                    <a href="https://github.com/JacksonAkt/6-Axis-Robot-Arm" target="_blank">View Repository</a>
+                    <a href="https://github.com/JacksonAkt/3D-Robot-Arm-" target="_blank">View Repository</a>
                 </div>
             </div>
         </section>
