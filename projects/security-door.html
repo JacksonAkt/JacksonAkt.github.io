@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Security Door Simulation | Jackson Nguyen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&family=Azeret+Mono&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Urbanist', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .mono { font-family: 'Azeret Mono', monospace; }
+        .accent-color { color: #DEFF9A; }
+        .card-bg { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="py-12">
+    <nav class="max-w-5xl mx-auto px-6 mb-16">
+        <a href="../index.html" class="mono accent-color hover:underline text-sm uppercase tracking-widest">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Back to Hub
+        </a>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6">
+        <div class="text-center md:text-left">
+        </div>
+        <div class="mb-16">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 uppercase text-white">Security Door Simulation</h1>
+            <p class="mono text-slate-500 uppercase tracking-widest tracking-[0.2em]">Industrial Automation & Access Control Systems</p>
+        </div>
+
+<section class="mb-20">
+            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight">Project Demonstration</h3>
+            <div class="w-full max-w-sm mx-auto card-bg border border-white/10 rounded-lg p-4">
+                <div class="relative w-full aspect-[9/16] bg-slate-900 rounded overflow-hidden border border-slate-700">
+                    <video class="w-full h-full object-contain" controls>
+                        <source src="../assets/SD-video.MP4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2">Technical Documentation</h3>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">01. System Schematics</p>
+                    <div class="w-full h-64 bg-slate-800 rounded overflow-hidden border border-white/10">
+                        <img src="../assets/SD-Schematics.png" class="w-full h-full object-contain" alt="System Schematics Layout">
+                    </div>
+                </div>
+
+                <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">02. Wiring Prototype (Real Life) </p>
+                    <div class="w-full h-64 bg-slate-800 rounded overflow-hidden border border-white/10">
+                        <img src="../assets/SD-wiring-Prototype.jpg" class="w-full h-full object-contain" alt="Physical Wiring Prototype">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-20 py-12 border-t border-white/10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 card-bg p-8 rounded-sm">
+                <div>
+                    <h3 class="text-2xl font-bold accent-color mb-2">Technical Source Code</h3>
+                    <p class="text-slate-400 text-sm">Review the firmware and system logic on GitHub.</p>
+                </div>
+                <div class="bg-white px-6 py-3 rounded flex items-center gap-2 text-slate-900 font-bold uppercase text-sm tracking-widest">
+                    <i class="fa-brands fa-github text-xl"></i>
+                    <a href="https://github.com/JacksonAkt/Security-Door-Stimulation" target="_blank">View Repository</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 py-10 text-center border-t border-white/5">
+        <a href="../index.html" class="mono text-[10px] text-slate-500 uppercase tracking-widest hover:accent-color transition">Return to Hub</a>
+    </footer>
+</body>
+</html>
