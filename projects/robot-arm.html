@@ -13,8 +13,6 @@
         .mono { font-family: 'Azeret Mono', monospace; }
         .accent-color { color: #DEFF9A; }
         .card-bg { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .component-img { width: 100%; height: 100%; object-contain; transition: transform 0.3s ease; }
-        .img-container:hover .component-img { transform: scale(1.05); }
     </style>
 </head>
 <body class="py-12">
@@ -34,175 +32,334 @@
         </div>
 
         <section class="mb-20">
-            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2">System Schematics</h3>
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                    <p class="mono text-xs text-slate-500 uppercase mb-2">01. Raw Schematics</p>
-                    <div class="w-full h-64 bg-slate-800 rounded overflow-hidden border border-white/5">
-                        <img src="../assets/Raw-Schematics.png" class="w-full h-full object-contain" alt="Raw Schematic">
-                    </div>
-                </div>
-                <div>
-                    <p class="mono text-xs text-slate-500 uppercase mb-2">02. Cooked Schematics</p>
-                    <div class="w-full h-64 bg-slate-800 rounded border border-dashed border-slate-600 flex items-center justify-center">
-                        <span class="text-slate-500 italic">[Upload Custom Schematic Image Here]</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="mono text-xs text-slate-500 uppercase mb-2">Wiring Prototype (Real Life)</p>
-                <div class="w-full h-80 bg-slate-800 rounded overflow-hidden border border-white/5">
-                    <img src="../assets/RobotArm/RA-wiring prototype.jpeg" class="w-full h-full object-contain" alt="Wiring Prototype">
+            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight">Project Demonstration</h3>
+            <div class="w-full card-bg border border-white/10 rounded-lg p-4 md:p-6">
+                <div class="relative w-full aspect-video bg-slate-900 rounded overflow-hidden border border-slate-700">
+                    <video class="w-full h-full object-cover" controls>
+                        <source src="../assets/RobotArmShow.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>
 
         <section class="mb-20">
-            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight">Key Hardware Components</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/IMG_6867.jpeg" class="component-img" alt="25kg Servo">
+            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2">System Schematics</h3>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">01. Raw Schematics (As Instructed)</p>
+                    <div class="w-full h-64 bg-slate-800 rounded overflow-hidden">
+                        <img src="../assets/Raw-Schematics.png" class="w-full h-full object-contain" alt="Raw Schematic">
                     </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">25kg Servo</p>
                 </div>
 
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/Buck.png" class="component-img" alt="Buck Converter">
+                <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">02. Cooked Schematics (Custom Improvements)</p>
+                    <div class="w-full h-64 bg-slate-800 rounded border border-dashed border-slate-600 flex items-center justify-center">
+                        <span class="text-slate-500 italic">[Upload Custom Schematic Image Here]</span>
                     </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">Buck Converter (24V -> 8V)</p>
                 </div>
+            </div>
 
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/Microcontroller.png" class="component-img" alt="Microcontroller">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">Microcontroller</p>
+            <div>
+                <div class="w-full h-64 bg-slate-800 rounded overflow-hidden">
+                    <img src="../assets/wiring-Prototype.jpg" class="w-full h-full object-contain" alt="Raw Schematic">
                 </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/CNC.png" class="component-img" alt="CNC Shield V3s">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">CNC Shield V3s</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/Fan.png" class="component-img" alt="24V Cooling Fans">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">24V Cooling Fans</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/TMC.jpeg" class="component-img" alt="Motor Drivers">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">Motor Drivers</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/DualSensor.png" class="component-img" alt="X,A,C Hall Sensors">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">X,A,C Hall Sensors</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/KY003.png" class="component-img" alt="Y,Z,B,C Hall Sensors">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">Y,Z,B,C Hall Sensors</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/IR.png" class="component-img" alt="IR Protocol">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">IR Comm. Protocol</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/powerSupply.jpeg" class="component-img" alt="Power Supply">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">Power Supply</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/XY.png" class="component-img" alt="X,Y Motors">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">X,Y Motors</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/Znew.png" class="component-img" alt="Z Motor">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">Z Motor</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/A-motor.png" class="component-img" alt="A Motor">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">A Motor</p>
-                </div>
-
-                <div class="space-y-2">
-                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                        <img src="../assets/BC.jpeg" class="component-img" alt="B,C Motors">
-                    </div>
-                    <p class="mono text-[10px] text-slate-500 uppercase">B,C Motors</p>
-                </div>
-
             </div>
         </section>
 
-       <section class="mb-20">
+<section class="mb-20">
+
+            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight">Key Hardware Components</h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+               
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/IMG_6867.jpeg" class="component-img" alt="25kg Servo">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">25kg Servo</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/Buck.png" class="component-img" alt="Buck Converter">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">Buck Converter (24V -> 8V)</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/Microcontroller.png" class="component-img" alt="Microcontroller">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">Microcontroller</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/CNC.png" class="component-img" alt="CNC Shield V3s">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">CNC Shield V3s</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/Fan.png" class="component-img" alt="24V Cooling Fans">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">24V Cooling Fans</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/TMC.jpeg" class="component-img" alt="Motor Drivers">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">Motor Drivers</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/DualSensor.png" class="component-img" alt="X,A,C Hall Sensors">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">X,A,C Hall Sensors</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/KY003.png" class="component-img" alt="Y,Z,B,C Hall Sensors">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">Y,Z,B,C Hall Sensors</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/IR.png" class="component-img" alt="IR Protocol">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">IR Comm. Protocol</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/powerSupply.jpeg" class="component-img" alt="Power Supply">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">Power Supply</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/XY.png" class="component-img" alt="X,Y Motors">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">X,Y Motors</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/Znew.png" class="component-img" alt="Z Motor">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">Z Motor</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/A-motor.png" class="component-img" alt="A Motor">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">A Motor</p>
+
+                </div>
+
+
+
+                <div class="space-y-2">
+
+                    <div class="img-container w-full h-32 bg-slate-800 rounded border border-white/10 overflow-hidden">
+
+                        <img src="../assets/AxisC.png" class="component-img" alt="B,C Motors">
+
+                    </div>
+
+                    <p class="mono text-[10px] text-slate-500 uppercase">B,C Motors</p>
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        <section class="mb-20">
+
     <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight">Technical Challenge & Debugging Roadmap</h3>
-    
+
+   
+
     <div class="space-y-6">
+
         <div class="card-bg border-2 border-orange-500/50 p-6 rounded-lg transition-all hover:border-orange-500">
+
             <div class="flex items-center gap-2 mb-2">
+
                 <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
+
                 <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Servo Current Inrush</h4>
+
             </div>
+
             <p class="text-slate-400 text-sm mb-4">The 25kg servo motor draws significant current during peak torque, causing logic rail instability.</p>
+
             <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: USE A 1000UF / 16V CAPACITOR FOR DECOUPLING TO BUFFER THE POWER RAIL.</p>
+
         </div>
 
+
+
         <div class="card-bg border-2 border-orange-500/50 p-6 rounded-lg transition-all hover:border-orange-500">
+
             <div class="flex items-center gap-2 mb-2">
+
                 <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
+
                 <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Buck Converter Polar Sensitivity</h4>
+
             </div>
+
             <p class="text-slate-400 text-sm mb-4">The XL4016 input is polarized; accidental reverse polarity will cause catastrophic component failure.</p>
+
             <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: INTEGRATE A PROTECTION DIODE AT THE INPUT STAGE TO PREVENT BLOW-UPS.</p>
+
         </div>
 
+
+
         <div class="card-bg border-2 border-orange-500/50 p-6 rounded-lg transition-all hover:border-orange-500">
+
             <div class="flex items-center gap-2 mb-2">
+
                 <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
+
                 <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Over-Current Safety (15A+)</h4>
+
             </div>
+
             <p class="text-slate-400 text-sm mb-4">System current may exceed 15A during multi-axis movement, risking heat damage or fire.</p>
+
             <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: ADD AN INLINE FUSE TO THE PRIMARY POWER RAIL TO PROTECT THE ENTIRE SYSTEM.</p>
+
         </div>
 
+
+
         <div class="card-bg border-2 border-orange-500/50 p-6 rounded-lg transition-all hover:border-orange-500">
+
             <div class="flex items-center gap-2 mb-2">
+
                 <i class="fa-solid fa-triangle-exclamation text-orange-500"></i>
+
                 <h4 class="font-bold text-slate-200 uppercase tracking-tighter">Prototype Connection Instability</h4>
+
             </div>
+
             <p class="text-slate-400 text-sm mb-4">The current system is built on a breadboard with jumper wires, which lacks mechanical stability. Wires often fall out due to loose connections; with over 30 critical pins, a single loose wire results in significant downtime.</p>
+
             <p class="mono text-[11px] text-orange-400 uppercase font-bold italic">PROPOSED IDEA: DESIGN A CUSTOM PCB WITH PIN HEADERS TO REPLACE LOOSE WIRING WITH SECURE CONNECTIONS.</p>
+
         </div>
+
     </div>
+
 </section>
+
+
 
         <section class="mt-20 py-12 border-t border-white/10">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 card-bg p-8 rounded-sm">
@@ -212,7 +369,7 @@
                 </div>
                 <div class="bg-white px-6 py-3 rounded flex items-center gap-2 text-slate-900 font-bold uppercase text-sm tracking-widest">
                     <i class="fa-brands fa-github text-xl"></i>
-                    <a href="https://github.com/JacksonAkt/3D-Robot-Arm-" target="_blank">View Repository</a>
+                    <a href="https://github.com/JacksonAkt/6-Axis-Robot-Arm" target="_blank">View Repository</a>
                 </div>
             </div>
         </section>
@@ -223,4 +380,3 @@
     </footer>
 </body>
 </html>
-
