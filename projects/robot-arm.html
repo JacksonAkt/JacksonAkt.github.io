@@ -43,29 +43,34 @@
             </div>
         </section>
 
-        <section class="mb-20">
-            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2">System Schematics</h3>
+<section class="mb-20">
+            <h3 class="text-2xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight text-white">System Schematics</h3>
 
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="grid md:grid-cols-2 gap-8">
                 <div>
                     <p class="mono text-xs text-slate-500 uppercase mb-2">01. Raw Schematics (As Instructed)</p>
-                    <div class="w-full h-64 bg-slate-800 rounded overflow-hidden">
-                        <img src="../assets/Raw-Schematics.png" class="w-full h-full object-contain" alt="Raw Schematic">
+                    <div class="w-full h-64 bg-slate-800 rounded border border-white/10 flex flex-col items-center justify-center p-6 text-center">
+                        <p class="text-xs text-slate-400 mb-4 max-w-[220px]">
+                            Original Wiring Diagram from the Producer
+                        </p>
+                        <a href="https://app.cirkitdesigner.com/project/ac6f1dd5-f837-4f83-979b-ccfcafe8fc56" target="_blank" rel="noopener noreferrer" class="w-full max-w-[180px] mono text-xs text-center border border-white/20 bg-white/5 py-3 rounded hover:bg-white/10 text-white font-semibold uppercase tracking-wider transition-all shadow-sm">
+                            View Reference Page <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
+                        </a>
                     </div>
                 </div>
 
                 <div>
                     <p class="mono text-xs text-slate-500 uppercase mb-2">02. Cooked Schematics (Custom Improvements)</p>
-                    <div class="w-full h-64 bg-slate-800 rounded border border-dashed border-slate-600 flex items-center justify-center">
-                        <span class="text-slate-500 italic">[Upload Custom Schematic Image Here]</span>
+                    <div class="w-full h-64 bg-slate-800 rounded border border-white/10 overflow-hidden">
+                        <img src="../assets/Cooked-Schematics.png" class="w-full h-full object-contain" alt="Custom Improved Schematic">
                     </div>
                 </div>
-            </div>
 
-            <div>
-                <p class="mono text-xs text-slate-500 uppercase mb-2">03. Wiring Prototype (Real Life) </p>
-                <div class="w-full h-64 bg-slate-800 rounded overflow-hidden">
-                    <img src="../assets/wiring-Prototype.jpg" class="w-full h-full object-contain" alt="Raw Schematic">
+                <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">03. Wiring Prototype (Real Life)</p>
+                    <div class="w-full h-64 bg-slate-800 rounded border border-white/10 overflow-hidden">
+                        <img src="../assets/wiring-Prototype.jpg" class="w-full h-full object-contain" alt="Real Life Wiring Prototype Layout">
+                    </div>
                 </div>
             </div>
         </section>
@@ -222,9 +227,9 @@
             <h2 class="text-3xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight text-white">The PCB Design</h2>
 
             <div class="mb-12">
-                <p class="mono text-xs text-slate-500 uppercase mb-2">01. Raw Schematics</p>
+                <p class="mono text-xs text-slate-500 uppercase mb-2">01. Schematics Construction</p>
                 <div class="w-full h-80 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                    <img src="../assets/RobotArm/raw-schematics.png" class="w-full h-full object-contain" alt="Raw PCB Schematics Layout">
+                    <img src="../assets/RobotArm/PCB/Raw-Schematics.png" class="w-full h-full object-contain" alt="Raw PCB Schematics Layout">
                 </div>
             </div>
 
@@ -238,45 +243,82 @@
                     
                     <div class="border-t border-white/5 pt-4">
                         <h4 class="text-white font-bold tracking-wide">220-Ohm Resistor</h4>
-                        <p class="text-slate-400 text-sm mt-1">
-                            Calculated via Ohm's Law: $R = \frac{\text{Voltage}}{\text{Max Current through LED}} = \frac{8\text{V}}{18\text{mA}} = 444.4\,\Omega$. Implemented as two parallel resistors ($222.2\,\Omega + 222.2\,\Omega$).
+                        <p class="text-slate-400 text-sm mt-2 flex flex-wrap items-center gap-x-1 gap-y-2">
+                            <span class="text-slate-400 text-sm">Calculated via Ohm's Law:</span>
+                            <span class="inline-flex items-center text-slate-200 font-mono text-xs bg-slate-900/50 border border-white/5 px-2 py-1 rounded">
+                                R = 
+                                <span class="flex flex-col items-center justify-center mx-1 leading-none text-[10px]">
+                                    <span class="pb-0.5 border-b border-slate-500">Voltage</span>
+                                    <span class="pt-0.5">Max Current through LED</span>
+                                </span>
+                                = 
+                                <span class="flex flex-col items-center justify-center mx-1 leading-none text-[10px]">
+                                    <span class="pb-0.5 border-b border-slate-500">8V</span>
+                                    <span class="pt-0.5">18 mA</span>
+                                </span>
+                                = 444.4 &Omega;
+                            </span>
+                            <span class="text-slate-400 text-sm">Implemented as two parallel resistors (222.2 &Omega; + 222.2 &Omega;).</span>
                         </p>
                     </div>
 
                     <div class="border-t border-white/5 pt-4">
                         <h4 class="text-white font-bold tracking-wide">1k-Ohm Resistor</h4>
-                        <p class="text-slate-400 text-sm mt-1">
-                            Calculated via Ohm's Law: $R = \frac{\text{Voltage}}{\text{Max Current through LED}} = \frac{24\text{V}}{18\text{mA}} = 1.333\text{ k}\Omega$. Implemented as two parallel resistors ($666.6\,\Omega + 666.6\,\Omega$).
+                        <p class="text-slate-400 text-sm mt-2 flex flex-wrap items-center gap-x-1 gap-y-2">
+                            <span class="text-slate-400 text-sm">Calculated via Ohm's Law:</span>
+                            <span class="inline-flex items-center text-slate-200 font-mono text-xs bg-slate-900/50 border border-white/5 px-2 py-1 rounded">
+                                R = 
+                                <span class="flex flex-col items-center justify-center mx-1 leading-none text-[10px]">
+                                    <span class="pb-0.5 border-b border-slate-500">Voltage</span>
+                                    <span class="pt-0.5">Max Current through LED</span>
+                                </span>
+                                = 
+                                <span class="flex flex-col items-center justify-center mx-1 leading-none text-[10px]">
+                                    <span class="pb-0.5 border-b border-slate-500">24V</span>
+                                    <span class="pt-0.5">18 mA</span>
+                                </span>
+                                = 1.333 k&Omega;
+                            </span>
+                            <span class="text-slate-400 text-sm">Implemented as two parallel resistors (666.6 &Omega; + 666.6 &Omega;).</span>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="mb-16 card-bg border border-white/10 p-4 rounded flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-file-excel text-green-500 text-xl"></i>
-                    <span class="text-sm font-semibold text-slate-300">Bill of Materials (BOM)</span>
+            <div class="mb-16 card-bg border border-white/10 p-6 rounded-lg">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-file-excel text-green-500 text-xl"></i>
+                            <span class="text-sm font-semibold text-slate-200 tracking-wide">RobotArm Project - Bill Of Materials</span>
+                        </div>
+                        <p class="text-xs text-slate-400">
+                            Comprehensive procurement sheet tracking 18 line items across a 5-unit production batch (Total Cost: $106.96).
+                        </p>
+                    </div>
+                    <a href="../assets/RobotArm/BOM.xlsx" download class="mono text-xs text-emerald-400 hover:text-emerald-300 border border-emerald-500/20 bg-emerald-500/5 px-4 py-2 rounded shadow-sm hover:bg-emerald-500/10 transition-all uppercase tracking-wider whitespace-nowrap">
+                        Download CSV Document <i class="fa-solid fa-download ml-1"></i>
+                    </a>
                 </div>
-                <a href="../assets/RobotArm/BOM.xlsx" download class="mono text-xs accent-color hover:underline uppercase tracking-wider">
-                    Download Excel <i class="fa-solid fa-download ml-1"></i>
-                </a>
             </div>
 
             <div class="space-y-12">
                 
                 <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">02. Simulation</p>
                     <div class="grid md:grid-cols-2 gap-6 mb-2">
                         <div class="w-full h-64 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                            <img src="../assets/RobotArm/simulation-1.jpg" class="w-full h-full object-contain" alt="Simulation Analysis 1">
+                            <img src="../assets/RobotArm/PCB/Schematics.png" class="w-full h-full object-contain" alt="Simulation Analysis 1">
                         </div>
                         <div class="w-full h-64 bg-slate-800 rounded border border-white/10 overflow-hidden">
-                            <img src="../assets/RobotArm/simulation-2.jpg" class="w-full h-full object-contain" alt="Simulation Analysis 2">
+                            <img src="../assets/RobotArm/PCB/Stimulation.png" class="w-full h-full object-contain" alt="Simulation Analysis 2">
                         </div>
                     </div>
-                    <p class="text-slate-400 text-sm italic">Run simulation to verify behavior of circuit.</p>
+                    <p class="text-slate-400 text-sm italic">Run simulation to verify behavior of the chosen components.</p>
                 </div>
 
                 <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">03. Circuit Test</p>
                     <div class="w-full h-64 bg-slate-800 rounded border border-white/10 mb-2 overflow-hidden">
                         <img src="../assets/RobotArm/practical-test.jpg" class="w-full h-full object-contain" alt="Practical Breadboard Testing">
                     </div>
@@ -284,6 +326,20 @@
                 </div>
 
                 <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">04. PCB Layout</p>
+                    <div class="grid md:grid-cols-2 gap-6 mb-2">
+                        <div class="w-full h-64 bg-slate-800 rounded border border-white/10 overflow-hidden">
+                            <img src="../assets/RobotArm/PCB/Layout1.png" class="w-full h-full object-contain" alt="Simulation Analysis 1">
+                        </div>
+                        <div class="w-full h-64 bg-slate-800 rounded border border-white/10 overflow-hidden">
+                            <img src="../assets/RobotArm/PCB/Layout2.png" class="w-full h-full object-contain" alt="Simulation Analysis 2">
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm italic">2-layer PCB (F:traces & vias - B: GND)</p>
+                </div>
+
+                <div>
+                    <p class="mono text-xs text-slate-500 uppercase mb-2">05. Footprint Verification</p>
                     <div class="w-full h-64 bg-slate-800 rounded border border-white/10 mb-2 overflow-hidden">
                         <img src="../assets/RobotArm/paper-footprint.jpg" class="w-full h-full object-contain" alt="Paper Footprint Scaling Verification">
                     </div>
