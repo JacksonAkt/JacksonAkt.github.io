@@ -217,6 +217,81 @@
     </div>
 
 </section>
+    
+    <section class="mb-20 border-t border-white/10 pt-16">
+            <h2 class="text-3xl font-bold mb-8 italic border-b border-slate-700 pb-2 uppercase tracking-tight text-white">The PCB Design</h2>
+
+            <div class="mb-12">
+                <p class="mono text-xs text-slate-500 uppercase mb-2">01. Raw Schematics</p>
+                <div class="w-full h-80 bg-slate-800 rounded border border-white/10 overflow-hidden">
+                    <img src="../assets/RobotArm/raw-schematics.png" class="w-full h-full object-contain" alt="Raw PCB Schematics Layout">
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <p class="mono text-xs text-slate-500 uppercase mb-4">Key Components & Reason of Choice</p>
+                <div class="card-bg rounded-lg p-6 md:p-8 space-y-6">
+                    <div>
+                        <h4 class="text-white font-bold tracking-wide">SR540 Schottky Diode</h4>
+                        <p class="text-slate-400 text-sm mt-1">Maximum possible current ~ 3.9A.</p>
+                    </div>
+                    
+                    <div class="border-t border-white/5 pt-4">
+                        <h4 class="text-white font-bold tracking-wide">220-Ohm Resistor</h4>
+                        <p class="text-slate-400 text-sm mt-1">
+                            Calculated via Ohm's Law: $R = \frac{\text{Voltage}}{\text{Max Current through LED}} = \frac{8\text{V}}{18\text{mA}} = 444.4\,\Omega$. Implemented as two parallel resistors ($222.2\,\Omega + 222.2\,\Omega$).
+                        </p>
+                    </div>
+
+                    <div class="border-t border-white/5 pt-4">
+                        <h4 class="text-white font-bold tracking-wide">1k-Ohm Resistor</h4>
+                        <p class="text-slate-400 text-sm mt-1">
+                            Calculated via Ohm's Law: $R = \frac{\text{Voltage}}{\text{Max Current through LED}} = \frac{24\text{V}}{18\text{mA}} = 1.333\text{ k}\Omega$. Implemented as two parallel resistors ($666.6\,\Omega + 666.6\,\Omega$).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16 card-bg border border-white/10 p-4 rounded flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-file-excel text-green-500 text-xl"></i>
+                    <span class="text-sm font-semibold text-slate-300">Bill of Materials (BOM)</span>
+                </div>
+                <a href="../assets/RobotArm/BOM.xlsx" download class="mono text-xs accent-color hover:underline uppercase tracking-wider">
+                    Download Excel <i class="fa-solid fa-download ml-1"></i>
+                </a>
+            </div>
+
+            <div class="space-y-12">
+                
+                <div>
+                    <div class="grid md:grid-cols-2 gap-6 mb-2">
+                        <div class="w-full h-64 bg-slate-800 rounded border border-white/10 overflow-hidden">
+                            <img src="../assets/RobotArm/simulation-1.jpg" class="w-full h-full object-contain" alt="Simulation Analysis 1">
+                        </div>
+                        <div class="w-full h-64 bg-slate-800 rounded border border-white/10 overflow-hidden">
+                            <img src="../assets/RobotArm/simulation-2.jpg" class="w-full h-full object-contain" alt="Simulation Analysis 2">
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm italic">Run simulation to verify behavior of circuit.</p>
+                </div>
+
+                <div>
+                    <div class="w-full h-64 bg-slate-800 rounded border border-white/10 mb-2 overflow-hidden">
+                        <img src="../assets/RobotArm/practical-test.jpg" class="w-full h-full object-contain" alt="Practical Breadboard Testing">
+                    </div>
+                    <p class="text-slate-400 text-sm italic">Test circuit in practice.</p>
+                </div>
+
+                <div>
+                    <div class="w-full h-64 bg-slate-800 rounded border border-white/10 mb-2 overflow-hidden">
+                        <img src="../assets/RobotArm/paper-footprint.jpg" class="w-full h-full object-contain" alt="Paper Footprint Scaling Verification">
+                    </div>
+                    <p class="text-slate-400 text-sm italic">Verify footprints on paper version of PCB.</p>
+                </div>
+
+            </div>
+        </section>
 
         <section class="mt-20 py-12 border-t border-white/10">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 card-bg p-8 rounded-sm">
